@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  wheelbackend:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "3251:3251"
+    restart: always
