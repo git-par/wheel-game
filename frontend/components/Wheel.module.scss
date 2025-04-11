@@ -1,0 +1,202 @@
+.btnImg {
+  max-width: 200px;
+  cursor: pointer;
+
+  margin-top: 50px;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+}
+
+.btnImgDiv {
+  text-align: -webkit-center;
+}
+
+// Existing styles
+.wheelCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #e5383b;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken(#e5383b, 10%);
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+// Win Popup styles
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17, 7, 49, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.popupContent {
+  position: relative;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 550px;
+  animation: popIn 0.5s cubic-bezier(0.38, 1.63, 0.58, 1);
+}
+
+.closeButton {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+
+  &:hover {
+    color: #e5383b;
+  }
+}
+
+.winMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.youWin {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #e5383b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background-color: #ffd700;
+  }
+
+  &::before {
+    left: -45px;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    right: -45px;
+    transform: translateY(-50%);
+  }
+}
+
+.winNumber {
+  font-size: 72px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 10px 0;
+}
+
+// Animation
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// Add confetti effect around the popup
+.popupContent::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-image: radial-gradient(circle, #ffd700 1%, transparent 3%),
+    radial-gradient(circle, #e5383b 1%, transparent 2%),
+    radial-gradient(circle, #ffca3a 1%, transparent 3%),
+    radial-gradient(circle, #8ac926 1%, transparent 2%);
+  background-size: 40px 40px;
+  z-index: -1;
+  opacity: 0.7;
+  animation: confetti 5s linear infinite;
+}
+
+@keyframes confetti {
+  0% {
+    background-position: 0 0, 20px 20px, 30px 10px, 10px 30px;
+  }
+  100% {
+    background-position: 20px 20px, 40px 40px, 50px 30px, 30px 50px;
+  }
+}
+/* Add to your Wheel.module.scss file */
+
+.audioControl {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.audioButton {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}

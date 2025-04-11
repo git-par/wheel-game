@@ -1,0 +1,11 @@
+{
+  "name": "wibes-roulette",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix backend install -f && npm --prefix frontend install -f",
+    "start:all": "concurrently \"npm --prefix backend start\" \"npm --prefix frontend start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

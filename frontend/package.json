@@ -1,0 +1,32 @@
+{
+  "name": "demo22",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "next dev",
+    "build": "next build",
+    "d": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "canvas-confetti": "^1.9.3",
+    "formik": "^2.4.6",
+    "js-cookie": "^3.0.5",
+    "next": "15.2.4",
+    "react": "^19.0.0",
+    "react-casino-roulette": "^1.1.2",
+    "react-dom": "^19.0.0",
+    "sass": "^1.86.3",
+    "wibes-roulette": "file:..",
+    "your-project": "file:..",
+    "yup": "^1.6.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "tailwindcss": "^4"
+  }
+}

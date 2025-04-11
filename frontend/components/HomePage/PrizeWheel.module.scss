@@ -1,0 +1,133 @@
+// PrizeWheel.module.scss
+
+.background {
+  background-color: #1c0e43;
+}
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  font-family: Arial, sans-serif;
+  color: white;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.container2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+}
+
+.formContent {
+  width: 100%;
+  max-width: 450px;
+}
+
+.title {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.inputGroup {
+  width: 100%;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: #2c1e5a;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+  }
+
+  &.inputError {
+    outline: 1px solid #ff3232;
+  }
+}
+
+.webkitcenter {
+  text-align: left;
+}
+
+.errorMessage {
+  color: #ff3232;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.submitButton {
+  padding: 1rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: white;
+  color: #1a1144;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}
+
+.wheelSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.wheelImg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .webkitcenter {
+    text-align: -webkit-center;
+  }
+}
