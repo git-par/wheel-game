@@ -9,7 +9,7 @@ import fs from "fs";
 
 const app = express();
 const PORT = 3251;
-const MONGO_URI = "mongodb://localhost:27017/wibes-draw";
+const MONGO_URI = "mongodb+srv://parHome:xizH7ZTgAXaGvh1T@par-homeproduct.kf9jprm.mongodb.net/wibes-draw";
 const JWT_SECRET = "wibes";
 
 function generateVCard(name, phone) {
